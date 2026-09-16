@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+        content="Smart Calculator built with Python Flask, HTML, CSS and JavaScript.">
+
+    <title>Smart Calculator | Python Flask</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <main class="app">
+
+        <section class="calculator">
+
+            <!-- Header -->
+            <header class="calculator-header">
+
+                <div>
+                    <span class="badge">FLASK PROJECT</span>
+                    <h1>Smart Calculator</h1>
+                    <p>Simple • Fast • Reliable</p>
+                </div>
+
+                <button id="themeButton" class="theme-button" title="Change theme">
+                    ☀️
+                </button>
+
+            </header>
+
+
+            <!-- Display -->
+            <section class="display-container">
+
+                <div id="expression" class="expression">
+                    0
+                </div>
+
+                <div id="result" class="result">
+                    0
+                </div>
+
+            </section>
+
+
+            <!-- Calculator Buttons -->
+            <section class="buttons">
+
+                <button class="function" data-action="clear">
+                    AC
+                </button>
+
+                <button class="function" data-action="backspace">
+                    ⌫
+                </button>
+
+                <button class="function" data-value="%">
+                    %
+                </button>
+
+                <button class="operator" data-value="/">
+                    ÷
+                </button>
+
+
+                <button data-value="7">
+                    7
+                </button>
+
+                <button data-value="8">
+                    8
+                </button>
+
+                <button data-value="9">
+                    9
+                </button>
+
+                <button class="operator" data-value="*">
+                    ×
+                </button>
+
+
+                <button data-value="4">
+                    4
+                </button>
+
+                <button data-value="5">
+                    5
+                </button>
+
+                <button data-value="6">
+                    6
+                </button>
+
+                <button class="operator" data-value="-">
+                    −
+                </button>
+
+
+                <button data-value="1">
+                    1
+                </button>
+
+                <button data-value="2">
+                    2
+                </button>
+
+                <button data-value="3">
+                    3
+                </button>
+
+                <button class="operator" data-value="+">
+                    +
+                </button>
+
+
+                <button class="zero" data-value="0">
+                    0
+                </button>
+
+                <button data-value=".">
+                    .
+                </button>
+
+                <button class="equals" data-action="calculate">
+                    =
+                </button>
+
+            </section>
+
+
+            <!-- History -->
+            <section class="history-section">
+
+                <div class="history-header">
+
+                    <h2>Calculation History</h2>
+
+                    <button id="clearHistory">
+                        Clear
+                    </button>
+
+                </div>
+
+                <div id="history" class="history">
+                    <p class="empty-history">
+                        No calculations yet
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- Footer -->
+            <footer>
+
+                <span>Built with</span>
+
+                <strong>Python</strong>
+                <span>•</span>
+                <strong>Flask</strong>
+                <span>•</span>
+                <strong>JavaScript</strong>
+
+            </footer>
+
+        </section>
+
+    </main>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
